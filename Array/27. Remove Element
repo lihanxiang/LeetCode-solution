@@ -1,0 +1,18 @@
+/* 其实这一题就是用两个指针移动来交换元素，以[0,1,2,2,3,0,4,2]为例
+ * 两个指针 i 和 count，在前两个元素不符合要求时，两个指针一起移动，
+ * 所以在交换时就是自己和自己交换，i 一直都在移动，第三个元素符合要求，
+ * 这时候 count 就不动，等待下一个不符合要求的元素（3）来和 count 所指向
+ * 的元素交换，以此类推，只遍历一次数组
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int count = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val){
+                int temp = nums[count];
+                nums[count++] = nums[i];
+                nums[i] = temp;
+            }
+        }
+        return count;
+    }
+}
