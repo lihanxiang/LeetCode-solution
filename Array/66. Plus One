@@ -1,0 +1,23 @@
+/* 就判断从末尾开始的每一位是否为9，如果不为9，
+ * 就 + 1 并返回，比如[1,0,0]，最后一位不为0，
+ * 就返回 [1,0,1]
+ * 如果最后一位为9，比如[9,9,9]，就将最后一位
+ * 变为 0，然后到数第二位也变为 0（循环），for
+ * 循环外的语句是在需要进位时进行的，因为如果
+ * 不是所有的位数都为 9，在 for 循环内就直接返回了
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int a = digits.length;
+        for (int i = a - 1; i >= 0 ; i--) {
+            if (digits[i] < 9){
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
+        }
+
+        int[] result = new int[a + 1];
+        result[0] = 1;
+        return result;
+    }
+}
