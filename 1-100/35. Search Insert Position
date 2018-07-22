@@ -1,0 +1,14 @@
+//小于某个数或者等于某个数都是返回这个数的位置，大于最后一个数时，返回数组长度
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == target || target < nums[i]){
+                return i;
+            }
+            if (target > nums[nums.length - 1]){
+                return nums.length;
+            }
+        }
+        return 0;
+    }
+}
