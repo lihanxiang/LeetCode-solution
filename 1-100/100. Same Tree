@@ -1,0 +1,17 @@
+//深搜，先判断根节点，然后判断左右孩子
+class Solution {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        boolean result = false;
+        if (p == null && q == null){
+            return true;
+        }
+        //经过上面的 if 筛选之后，接下来就判断两个孩子是否有空的
+        if (p == null || q == null){
+            return false;
+        }
+        if (p.val == q.val){
+            result = isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+        }
+        return result;
+    }
+}
