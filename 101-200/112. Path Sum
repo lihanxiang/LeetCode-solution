@@ -1,0 +1,17 @@
+// 把 sum 减去每一层的节点的值，比较最后的 sum 和 最底层节点的值是否相等
+class Solution {
+    public boolean hasPathSum(TreeNode root, int sum) {
+        return DFS(root, sum);
+    }
+
+    public boolean DFS(TreeNode treeNode, int sum){
+        if (treeNode == null){
+            return false;
+        }
+
+        if (treeNode.left == null && treeNode.right == null && sum == treeNode.val){
+            return true;
+        }
+        return DFS(treeNode.left, sum - treeNode.val) || DFS(treeNode.right, sum - treeNode.val);
+    }
+}
