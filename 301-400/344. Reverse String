@@ -1,0 +1,10 @@
+//直接用 char 数组来存放每一个字符，最后转换成字符串
+class Solution {
+    public String reverseString(String s) {
+        char[] temp = new char[s.length()];
+        for (int i = 0; i < s.length(); i++) {
+            temp[i] = s.charAt(s.length() - i - 1);
+        }
+        return String.valueOf(temp);
+    }
+}
