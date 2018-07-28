@@ -1,0 +1,22 @@
+// 深搜完了之后，如果条件不符合就 false
+class Solution {
+    private boolean result = true;
+
+    public boolean isBalanced(TreeNode root) {
+        DFS(root);
+        return result;
+    }
+
+    public int DFS(TreeNode root){
+        if (root == null){
+            return 0;
+        }
+        int left = DFS(root.left) + 1;
+        int right = DFS(root.right) + 1;
+
+        if (Math.abs(left - right) > 1){
+            result = false;
+        }
+        return left > right ? left : right;
+    }
+}

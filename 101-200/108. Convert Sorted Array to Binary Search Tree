@@ -1,0 +1,20 @@
+//用二分和深搜构建一棵树，注意数组为空的情况
+class Solution {
+    public TreeNode sortedArrayToBST(int[] nums) {
+        if (nums.length == 0){
+            return null;
+        }
+        return DFS(nums, 0, nums.length - 1);
+    }
+
+    public TreeNode DFS(int[] nums, int lo, int hi){
+        if (lo <= hi){
+            int mid = lo + (hi - lo) / 2;
+            TreeNode node = new TreeNode(nums[mid]);
+            node.left = DFS(nums, lo, mid - 1);
+            node.right = DFS(nums, mid + 1, hi);
+            return node;
+        }
+        return null;
+    }
+}

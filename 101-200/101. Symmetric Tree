@@ -1,0 +1,20 @@
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        //如果根节点为空，要返回 true，烦！
+        if(root == null){
+            return true;
+        }
+        return DFS(root.left, root.right);
+    }
+
+    public boolean DFS(TreeNode leftChild, TreeNode rightChild){
+        if (leftChild == null || rightChild == null){
+            return leftChild == rightChild;
+        }
+        if (leftChild.val != rightChild.val){
+            return false;
+        }
+        //判断一个节点的左孩子和另一个节点的右孩子是否相同
+        return DFS(leftChild.left, rightChild.right) && DFS(leftChild.right, rightChild.left);
+    }
+}
