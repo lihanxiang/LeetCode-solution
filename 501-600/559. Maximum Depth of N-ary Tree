@@ -1,0 +1,18 @@
+// 直接在叶节点一个一个返回，得到最后的值
+class Solution {
+    public int maxDepth(Node root) {
+        return DFS(root);
+    }
+
+    public int DFS(Node root){
+        int maxDepth = 0;
+        if (root == null){
+            return 0;
+        }
+        for (Node child :
+                root.children) {
+            maxDepth = Math.max(maxDepth, DFS(child));
+        }
+        return maxDepth + 1;
+    }
+}
