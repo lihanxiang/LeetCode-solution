@@ -1,0 +1,22 @@
+// BFS, 用 color 来标记一开始的 image[sr][sc] 的值，用来做比较
+class Solution {
+    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+        if (image[sr][sc] == newColor){
+            return image;
+        }
+        DFS(image, sr, sc, image[sr][sc], newColor);
+        return image;
+    }
+
+    public void DFS(int[][] image, int sr, int sc, int color, int newColor){
+        if (sr < 0 || sc < 0 || sr >= image.length || sc >= image[0].length
+                || image[sr][sc] != color){
+            return;
+        }
+        image[sr][sc] = newColor;
+        DFS(image, sr + 1, sc, color, newColor);
+        DFS(image, sr - 1, sc, color, newColor);
+        DFS(image, sr, sc + 1, color, newColor);
+        DFS(image, sr, sc - 1, color, newColor);
+    }
+}
