@@ -1,5 +1,6 @@
 # LeetCode-solution
-Accepted solution of LeetCode in **Java**
+
+基本不做应用题，都是做一些直观的题目，用 Java 来做
 
 这里按照类型来进行分类，如果想直接按题号查找，可去对应文件夹内查找
 
