@@ -1,0 +1,20 @@
+class Solution {
+    public List<Integer> rightSideView(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        DFS(root, list, 0);
+        return list;
+    }
+
+    //每层只添加一个结点
+    public void DFS(TreeNode treeNode, List<Integer> list, int depth){
+        if (treeNode != null){
+			//第 0 层直接添加根节点，后面就先找右子节点，再找左子节点
+            if (depth == list.size()){
+                list.add(treeNode.val);
+            }
+            //先走右边，再走左边
+            DFS(treeNode.right, list, depth + 1);
+            DFS(treeNode.left, list, depth + 1);
+        }
+    }
+}
