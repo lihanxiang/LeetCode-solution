@@ -1,0 +1,22 @@
+class Solution {
+    public int numSpecialEquivGroups(String[] A) {
+        Set<String> set = new HashSet<>();
+        for (String a : A) {
+            char[] string = a.toCharArray();
+            char[] odd = new char[20];
+            char[] even = new char[20];
+            for (int j = 0; j < string.length; j++) {
+                if (j % 2 == 0) {
+                    even[j] = string[j];
+                } else {
+                    odd[j] = string[j];
+                }
+            }
+            Arrays.sort(odd);
+            Arrays.sort(even);
+            String result = String.valueOf(odd) + String.valueOf(even);
+            set.add(result);
+        }
+        return set.size();
+    }
+}

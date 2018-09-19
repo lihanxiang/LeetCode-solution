@@ -1,0 +1,25 @@
+class Solution {
+    public String toGoatLatin(String S) {
+        String[] strings = S.split(" ");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < strings.length; i++) {
+            String word = strings[i];
+            char c = word.toLowerCase().charAt(0);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+                sb.append(word);
+            }
+            else {
+                for (int j = 1; j < word.length(); j++) {
+                    sb.append(word.charAt(j));
+                }
+                sb.append(word.charAt(0));
+            }
+            sb.append("ma");
+            for (int j = 0; j <= i; j++) {
+                sb.append("a");
+            }
+            sb.append(" ");
+        }
+        return sb.toString().trim();
+    }
+}
