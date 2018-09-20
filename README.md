@@ -57,6 +57,7 @@ Some problems already in DFS
 
 |#  |Problems|Difficulty|Solution|
 |-  |- 		 |-   		|-       |
+|13 |[Roman to Integer](https://leetcode.com/problems/roman-to-integer)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/1-100/13.%20Roman%20to%20Integer)
 |20 |[Valid Parentheses](https://leetcode.com/problems/valid-parentheses)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/1-100/20.%20Valid%20Parentheses)
 |151|[Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/101-200/151.%20Reverse%20Words%20in%20a%20String)
 |344|[Reverse String](https://leetcode.com/problems/reverse-string)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/301-400/344.%20Reverse%20String)
@@ -64,6 +65,7 @@ Some problems already in DFS
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/501-600/520.%20Detect%20Capital)
 |521|[Longest Uncommon Subsequence I](https://leetcode.com/problems/longest-uncommon-subsequence-i)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/501-600/521.%20Longest%20Uncommon%20Subsequence%20I)
 |557|[Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/501-600/557.%20Reverse%20Words%20in%20a%20String%20III)
+|606|[Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/601-700/606.%20Construct%20String%20from%20Binary%20Tree)
 |657|[Robot Return to Origin](https://leetcode.com/problems/robot-return-to-origin)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/601-700/657.%20Robot%20Return%20to%20Origin)
 |696|[Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/601-700/696.%20Count%20Binary%20Substrings)
 |709|[To Lower Case](https://leetcode.com/problems/to-lower-case)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/701-800/709.%20To%20Lower%20Case)
