@@ -1,0 +1,15 @@
+class Solution {
+    public static boolean canConstruct(String ransomNote, String magazine) {
+        int[] count = new int[26];
+        for (int i = 0; i < magazine.length(); i++) {
+            //减去字母的 ASCII 码来表示位置
+            count[magazine.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < ransomNote.length(); i++) {
+            if (--count[ransomNote.charAt(i) - 'a'] < 0){
+                return false;
+            }
+        }
+        return true;
+    }
+}

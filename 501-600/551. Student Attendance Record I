@@ -1,0 +1,11 @@
+class Solution {
+    public boolean checkRecord(String s) {
+        int[] count = new int[2];
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 'A'){
+                count[0]++;
+            }
+        }
+        return count[0] <= 1 && !s.contains("LLL");
+    }
+}
