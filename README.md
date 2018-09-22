@@ -64,6 +64,8 @@ Some problems already in DFS
 |345|[Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/301-400/345.%20Reverse%20Vowels%20of%20a%20String)
 |383|[Ransom Note](https://leetcode.com/problems/ransom-note)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/301-400/383.%20Ransom%20Note)
 |387|[First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/301-400/387.%20First%20Unique%20Character%20in%20a%20String)
+|434|[Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/401-500/434.%20Number%20of%20Segments%20in%20a%20String)
+|459|[Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/401-500/459.%20Repeated%20Substring%20Pattern)
 |520|[Detect Capital](https://leetcode.com/problems/detect-capital)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/501-600/520.%20Detect%20Capital)
 |521|[Longest Uncommon Subsequence I](https://leetcode.com/problems/longest-uncommon-subsequence-i)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/501-600/521.%20Longest%20Uncommon%20Subsequence%20I)
 |551|[Student Attendance Record I](https://leetcode.com/problems/student-attendance-record-i)|Easy|[Java](https://github.com/lihanxiang/LeetCode-solution/blob/master/501-600/551.%20Student%20Attendance%20Record%20I)
