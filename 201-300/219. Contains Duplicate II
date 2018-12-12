@@ -1,0 +1,36 @@
+//变态版暴力解法，运行时间超过一秒
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        if (nums.length < 2){
+            return false;
+        }
+        for (int i = 0; i < nums.length; i++){
+            for (int j = i - 1; j >= i - k && j >= 0; j--){
+                if (nums[i] == nums[j]){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
+
+//然后用 Set 来做
+class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        if (nums.length < 2){
+            return false;
+        }
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++){
+            //只存储 k 个数，然后删一个补一个
+            if (i > k) {
+                set.remove(nums[i - k - 1]);
+            }
+            if (!set.add(nums[i])){
+                return true;
+            }
+        }
+        return false;
+    }
+}
