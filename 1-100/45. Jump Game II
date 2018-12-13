@@ -1,0 +1,17 @@
+//在每个范围都找出能走的最大步数，题目假设最后是一定能走到的。每过一个范围就 count++ 一次
+class Solution {
+    public int jump(int[] nums) {
+        if (nums.length == 0){
+            return 0;
+        }
+        int count = 0, begin = 0, reach = 0;
+        for (int i = 0; i < nums.length - 1; i++){
+            reach = Math.max(reach, i + nums[i]);
+            if (i == begin){
+                count++;
+                begin = reach;
+            }
+        }
+        return count;
+    }
+}
