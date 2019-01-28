@@ -1,0 +1,23 @@
+//对根节点的两个子节点进行递归查找，就相当于以根节点为 mid，进行二分
+class Solution {
+    public int countNodes(TreeNode root) {
+        if (root == null){
+            return 0;
+        }
+        return find(root) + 1;
+    }
+    
+    public int find(TreeNode root){
+        if (root == null){
+            return 0;
+        }
+        int left = 0, right = 0;
+        if (root.left != null){
+            left = find(root.left) + 1;
+        }
+        if (root.right != null){
+            right = find(root.right) + 1;
+        }
+        return left + right;
+    }
+}
