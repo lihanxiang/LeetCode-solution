@@ -10,9 +10,7 @@ class Solution {
                 stack.push(']');
             } else if (c[i] == '{') {
                 stack.push('}');
-            }
-			//如果一开始就是 ([{，则直接返回 false, 然后每次循环依次出栈
-			else if (stack.size() == 0 || stack.pop() != c[i]){
+            } else if (stack.size() == 0 || stack.pop() != c[i]){
                 return false;
             }
         }

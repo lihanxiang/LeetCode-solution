@@ -1,0 +1,52 @@
+//直接两条链表的节点比较，每次取小的
+class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if (l1 == null){
+            return l2;
+        }
+        if (l2 == null){
+            return l1;
+        }
+        ListNode dummy = new ListNode(0);
+        ListNode l = dummy;
+        while (l1 != null && l2 != null){
+            if (l1.val < l2.val){
+                l.next = l1;
+                l = l.next;
+                l1 = l1.next;
+            } else {
+                l.next = l2;
+                l = l.next;
+                l2 = l2.next;
+            }
+        }
+        if (l1 != null){
+            l.next = l1;
+        }
+        if (l2 != null){
+            l.next = l2;
+        }
+        return dummy.next;
+    }
+}
+
+//递归，时间差不多，空间复杂度要高一点
+class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if (l1 == null){
+            return l2;
+        }
+        if (l2 == null){
+            return l1;
+        }
+        ListNode l;
+        if (l1.val < l2.val){
+            l = l1;
+            l.next = mergeTwoLists(l1.next, l2);
+        } else {
+            l = l2;
+            l.next = mergeTwoLists(l1, l2.next);
+        }
+        return l;
+    }
+}
