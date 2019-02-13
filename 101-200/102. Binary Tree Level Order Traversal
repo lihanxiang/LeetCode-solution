@@ -25,3 +25,23 @@ class Solution {
         return lists;
     }
 }
+
+// DFS，先每层建立一个 list，再加入数值，效率更高
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> lists = new ArrayList<>();
+        helper(lists, root, 0);
+        return lists;
+    }
+    public void helper(List<List<Integer>> lists, TreeNode node, int height){
+        if (node == null){
+            return;
+        }
+        if (height >= lists.size()){
+            lists.add(new ArrayList<>());
+        }
+        lists.get(height).add(node.val);
+        helper(lists, node.left, height + 1);
+        helper(lists, node.right, height + 1);
+    }
+}

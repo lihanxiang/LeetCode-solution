@@ -1,0 +1,33 @@
+//用 order 来判断是正序还是倒序
+class Solution {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> lists = new ArrayList<>();
+        if (root == null){
+            return lists;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        boolean order = true;
+        while (!queue.isEmpty()){
+            int size = queue.size();
+            LinkedList<Integer> list = new LinkedList();
+            for (int i = 0; i < size; i++){
+                TreeNode node = queue.poll();
+                if (order){
+                    list.add(node.val);
+                } else {
+                    list.addFirst(node.val);
+                }
+                if (node.left != null){
+                    queue.offer(node.left);
+                }
+                if (node.right != null){
+                    queue.offer(node.right);
+                } 
+            }
+            lists.add(list);
+            order = order ? false : true;
+        }
+        return lists;
+    }
+}
