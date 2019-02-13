@@ -1,0 +1,40 @@
+// 根节点不做判断，从左右子节点开始，与父节点做判断
+class Solution {
+    public boolean isValidBST(TreeNode root) {
+        return helper(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
+    
+    public boolean helper(TreeNode root, long min, long max){
+        if (root == null){
+            return true;
+        }
+        if (root.val <= min || root.val >= max){
+            return false;
+        }
+        return helper(root.left, min, root.val) && helper(root.right, root.val, max);
+    }
+}
+
+// 中序遍历二叉搜索树，就得到一个有序的数组，只要某一个值大于等于前一个值，就 false
+class Solution {
+    public boolean isValidBST(TreeNode root) {
+        if (root == null){
+            return true;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode cur = root, pre = null;
+        while (cur != null || !stack.isEmpty()){
+            while (cur != null){
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.pop();
+            if (pre != null && cur.val <= pre.val){
+                return false;
+            }
+            pre = cur;
+            cur = cur.right;
+        }
+        return true;
+    }
+}
