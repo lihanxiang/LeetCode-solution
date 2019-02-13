@@ -1,0 +1,40 @@
+// 递归求解
+class Solution {
+    List<Integer> list = new ArrayList<>();
+    public List<Integer> inorderTraversal(TreeNode root) {
+        helper(root);
+        return list;
+    }
+    
+    public void helper(TreeNode node){
+        if (node == null){
+            return;
+        }
+        helper(node.left);
+        list.add(node.val);
+        helper(node.right);
+    }
+}
+
+// 使用栈，效率慢一点，空间复杂度也高一点
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null){
+            return list;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()){
+            while (cur != null){
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.pop();
+            list.add(cur.val);
+            cur = cur.right;
+            
+        }
+        return list;
+    }
+}
