@@ -1,14 +1,19 @@
-//两个指针移动，将每个数和它之后的每个数对比，如果 max 还是 -1，就设为 0
+// 记录 profit，并不断移动 buy，直到最后
 class Solution {
     public int maxProfit(int[] prices) {
-        int max = -1, temp;
-        for (int i = 0; i < prices.length; i++) {
-            for (int j = i + 1; j < prices.length; j++) {
-                temp = prices[j] - prices[i];
-                max = temp > max ? temp : max;
+        if (prices.length == 0){
+            return 0;
+        }
+        int buy = prices[0], profit = 0;
+        for (int i = 1; i < prices.length; i++){
+            if (prices[i] > buy){
+                if (prices[i] - buy > profit){
+                    profit = prices[i] - buy;
+                }
+            } else {
+                buy = prices[i];
             }
         }
-        max = max < 0 ? 0 : max;
-        return max;
+        return profit;
     }
 }

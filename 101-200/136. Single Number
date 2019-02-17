@@ -1,0 +1,13 @@
+// a ^ b 的结果再 ^ b，就会得到 a，也就是连续异或两个相同的数，就会得到原数
+class Solution {
+    public int singleNumber(int[] nums) {
+        if (nums.length == 0){
+            return 0;
+        }
+        int result = 0;
+        for (int i = 0; i < nums.length; i++){
+            result ^= nums[i];
+        }
+        return result;
+    }
+}
