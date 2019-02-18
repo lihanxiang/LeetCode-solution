@@ -22,3 +22,19 @@ class Solution {
         return left < right ? left : right;
     }
 }
+
+//用深搜效率最高
+class Solution {
+    public int minDepth(TreeNode root) {
+        return depth(root);
+    }
+    
+    public int depth(TreeNode root){
+        if (root == null){
+            return 0;
+        }
+        int left = depth(root.left);
+        int right = depth(root.right);
+        return (left == 0 || right == 0) ? left + right + 1 : Math.min(left, right) + 1;
+    }
+}
