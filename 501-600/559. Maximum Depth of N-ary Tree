@@ -16,3 +16,24 @@ class Solution {
         return maxDepth + 1;
     }
 }
+
+class Solution {
+    private int max = 0;
+    public int maxDepth(Node root) {
+        if (root == null){
+            return 0;
+        }
+        DFS(root, 1);
+        return max;
+    }
+    
+    public void DFS(Node root, int depth){
+        if (root == null){
+            return;
+        }
+        max = Math.max(max, depth);
+        for (Node n : root.children){
+            DFS(n, depth + 1);
+        }
+    }
+}

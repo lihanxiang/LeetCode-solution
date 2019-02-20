@@ -14,3 +14,23 @@ class Solution {
         return root.val;
     }
 }
+
+class Solution {
+    private int maxDepth = -1, value = 0;
+    public int findBottomLeftValue(TreeNode root) {
+        DFS(root, 0);
+        return value;
+    }
+    
+    public void DFS(TreeNode node, int depth){
+        if (node == null){
+            return;
+        }
+        if (node.left == null && depth > maxDepth){
+            maxDepth = depth;
+            value = node.val;
+        }
+        DFS(node.left, depth + 1);
+        DFS(node.right, depth + 1);
+    }
+}
