@@ -1,0 +1,35 @@
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        if (s.length() == 0){
+            return true;
+        }
+        int indexS = 0, indexT = 0;
+        while (indexT < t.length()){
+            if (s.charAt(indexS) == t.charAt(indexT)){
+                indexS++;
+                if (indexS == s.length()){
+                    return true;
+                }
+            }
+            indexT++;
+        }
+        return false;
+    }
+}
+
+// 这一种更快，只要发现 s 中有一个不符合就 return false
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        if (s.length() == 0){
+            return true;
+        }
+        int index = -1;
+        for (char c : s.toCharArray()){
+            index = t.indexOf(c, index + 1);
+            if (index == -1){
+                return false;
+            }
+        }
+        return true;
+    }
+}
