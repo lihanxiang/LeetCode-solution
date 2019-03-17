@@ -1,7 +1,0 @@
-//按照三种要求检测就可以了
-class Solution {
-    public boolean detectCapitalUse(String word) {
-        return word.equals(word.toUpperCase()) || word.equals(word.toLowerCase())
-                || word.substring(1).equals(word.substring(1).toLowerCase());
-    }
-}
