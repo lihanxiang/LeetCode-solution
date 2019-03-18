@@ -7,3 +7,7 @@
 其实，最近忙着复习基础知识（Java、数据库等），以应对春招，但是在算法方面，确实不如从前那么静得下心来，对于春招，也变佛系了，接下来的重心可能就是放在刷算法和学一些新技术了
 
 这个库里原先的答案都将会清空，在接下来，将会认真对待每一道刷过的题
+
+### String
+
+[3. Longest Substring Without Repeating Characters 不重复的最长子串](https://github.com/lihanxiang/LeetCode-solution/blob/master/String/Longest%20Substring%20Without%20Repeating%20Characters.md)
