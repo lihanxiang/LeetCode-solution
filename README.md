@@ -8,6 +8,8 @@
 
 这个库里原先的答案都将会清空，在接下来，将会认真对待每一道刷过的题
 
+因为 LeetCode 以及刷了两百多了，所以趁着现在放暑假，再做一遍，然后按照 tag 来存放，某些题目有可能涉及到好几个 tag，或者是一些知识点的，所以一个题目可能出现在多个分类中
+
 ### String
 
 [3. Longest Substring Without Repeating Characters 不重复的最长子串](https://github.com/lihanxiang/LeetCode-solution/blob/master/String/Longest%20Substring%20Without%20Repeating%20Characters.md)
